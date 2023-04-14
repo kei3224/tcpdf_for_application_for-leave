@@ -197,13 +197,34 @@ class PDF extends TCPDF {
         $this->Ln();
 
         $this->SetFont('helvetica','',10);
-        $this->Cell(115,5, utf8_decode(" 7.C TYPE OF LEAVE TO BE AVAILED OF    "),1);
-        $this->Cell(87,5," 6.B DETAILS OF LEAVE",1);
+        $this->Cell(115,5, utf8_decode(" 7.C APPROVED FOR"),'TL');
+        $this->Cell(87,5," 7.D DISAPPROVED DUE TO ",'TR');
         $this->Ln();
+        
         $this->SetFont('helvetica','',8);
-        $this->Cell(115,5,'      Vacation Leave(Sec. 51, Rule XVI, Omnibus Rules Implementing E.O. No. 292)','LR');
-        $this->Cell(87,5,"    Incase of Vacation/Special Previlage Leave:",'LR');
+        $this->Cell(115,5,'      ___________ days with pay','L');
+        $this->Cell(87,5,"  _________________________________________________",'R');
         $this->Ln();
+         
+        $this->SetFont('helvetica','',8);
+        $this->Cell(115,5,'      ___________ days without pay','L');
+        $this->Cell(87,5,"  _________________________________________________",'R');
+        $this->Ln();
+
+        $this->SetFont('helvetica','',8);
+        $this->Cell(115,5,'      ___________ others specify','L');
+        $this->Cell(87,5,"  _________________________________________________",'R');
+        $this->Ln();
+        $this->Ln();
+        $this->Ln();
+
+        $this->SetFont('helvetica','B',10);
+        $this->Cell(202,5,'DIOSDADO A. CAYABYAB, CESO Vi',0,1,'C');
+
+        $this->SetFont('helvetica','',10);
+        $this->Cell(202,5,'Asst. Schools Division Superintendent','LRB',1,'C');
+
+
 
         
 
